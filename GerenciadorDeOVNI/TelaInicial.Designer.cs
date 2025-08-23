@@ -45,7 +45,7 @@
             // 
             this.lbltTrip.AutoSize = true;
             this.lbltTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltTrip.Location = new System.Drawing.Point(105, 86);
+            this.lbltTrip.Location = new System.Drawing.Point(45, 276);
             this.lbltTrip.Name = "lbltTrip";
             this.lbltTrip.Size = new System.Drawing.Size(199, 24);
             this.lbltTrip.TabIndex = 0;
@@ -54,7 +54,7 @@
             // txbTrip
             // 
             this.txbTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTrip.Location = new System.Drawing.Point(324, 81);
+            this.txbTrip.Location = new System.Drawing.Point(264, 271);
             this.txbTrip.Name = "txbTrip";
             this.txbTrip.Size = new System.Drawing.Size(141, 29);
             this.txbTrip.TabIndex = 1;
@@ -62,7 +62,7 @@
             // txbAbd
             // 
             this.txbAbd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbAbd.Location = new System.Drawing.Point(324, 128);
+            this.txbAbd.Location = new System.Drawing.Point(264, 318);
             this.txbAbd.Name = "txbAbd";
             this.txbAbd.Size = new System.Drawing.Size(141, 29);
             this.txbAbd.TabIndex = 3;
@@ -71,7 +71,7 @@
             // 
             this.lblAbd.AutoSize = true;
             this.lblAbd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAbd.Location = new System.Drawing.Point(105, 133);
+            this.lblAbd.Location = new System.Drawing.Point(45, 323);
             this.lblAbd.Name = "lblAbd";
             this.lblAbd.Size = new System.Drawing.Size(201, 24);
             this.lblAbd.TabIndex = 2;
@@ -81,7 +81,7 @@
             // 
             this.lblOrigem.AutoSize = true;
             this.lblOrigem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrigem.Location = new System.Drawing.Point(136, 181);
+            this.lblOrigem.Location = new System.Drawing.Point(76, 371);
             this.lblOrigem.Name = "lblOrigem";
             this.lblOrigem.Size = new System.Drawing.Size(168, 24);
             this.lblOrigem.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             this.cmbPlanetas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPlanetas.FormattingEnabled = true;
-            this.cmbPlanetas.Location = new System.Drawing.Point(324, 173);
+            this.cmbPlanetas.Location = new System.Drawing.Point(264, 363);
             this.cmbPlanetas.Name = "cmbPlanetas";
             this.cmbPlanetas.Size = new System.Drawing.Size(141, 32);
             this.cmbPlanetas.TabIndex = 5;
@@ -99,7 +99,7 @@
             // btnInicio
             // 
             this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.Location = new System.Drawing.Point(191, 242);
+            this.btnInicio.Location = new System.Drawing.Point(131, 432);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(219, 52);
             this.btnInicio.TabIndex = 6;
@@ -111,7 +111,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(171, 34);
+            this.lblTitulo.Location = new System.Drawing.Point(111, 224);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(239, 24);
             this.lblTitulo.TabIndex = 7;
@@ -119,10 +119,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::GerenciadorDeOVNI.Properties.Resources.ufo;
-            this.pictureBox1.Location = new System.Drawing.Point(90, 22);
+            this.pictureBox1.Image = global::GerenciadorDeOVNI.Properties.Resources.alien;
+            this.pictureBox1.Location = new System.Drawing.Point(66, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(297, 171);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -131,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 344);
+            this.ClientSize = new System.Drawing.Size(444, 508);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnInicio);
@@ -145,7 +145,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "TelaInicial";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicializador";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

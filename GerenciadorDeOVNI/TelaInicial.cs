@@ -37,6 +37,16 @@ namespace GerenciadorDeOVNI
                 MessageBox.Show("Você deve selecionar o planeta que deseja invadir.",
                     "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else
+            {
+                int maxTrip = int.Parse(txbTrip.Text);
+                int maxAbd = int.Parse(txbAbd.Text);
+                string planetaOrigem = cmbPlanetas.Text;
+
+                //Instanciar o OVNI
+                BibliotecaOVNI.OVNI ovni = new BibliotecaOVNI.OVNI(maxTrip, maxAbd, planetaOrigem);
+                    
+            }
         }
     }
 }

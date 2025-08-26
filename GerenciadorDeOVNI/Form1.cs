@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GerenciadorDeOVNI
 {
-    public partial class Form1 : Form
+    public partial class primeiraPagina : Form
     {
-        public Form1()
+        public primeiraPagina()
         {
             InitializeComponent();
         }

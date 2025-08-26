@@ -29,7 +29,7 @@ namespace GerenciadorDeOVNI
             }
             else if (txbAbd.Text == "")
             {
-                MessageBox.Show("Informe a capacidade de do compartimento de abdução.",
+                MessageBox.Show("Informe a capacidade do compartimento de abdução.",
                     "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (cmbPlanetas.SelectedIndex == -1)
@@ -43,9 +43,15 @@ namespace GerenciadorDeOVNI
                 int maxAbd = int.Parse(txbAbd.Text);
                 string planetaOrigem = cmbPlanetas.Text;
 
-                //Instanciar o OVNI
-                BibliotecaOVNI.OVNI ovni = new BibliotecaOVNI.OVNI(maxTrip, maxAbd, planetaOrigem);
-                    
+                BibliotecaOVNI.OVNI ovni = new BibliotecaOVNI.OVNI(maxTrip, maxAbd, planetaOrigem); //Instanciar o OVNI
+
+                Gerenciador gerenciador = new Gerenciador(ovni); // Instanciar a janela gerenciador para conseguir chama-la
+
+                Hide(); // Esconder a janela atual
+
+                gerenciador.ShowDialog(); // Abrir a janela do gerenciador
+
+                Show(); // Mostrar novamente a tela atual
             }
         }
     }

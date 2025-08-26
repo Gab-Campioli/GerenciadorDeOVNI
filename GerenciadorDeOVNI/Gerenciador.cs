@@ -40,6 +40,15 @@ namespace GerenciadorDeOVNI
             grbPlaneta.Enabled = ovni.Situacao;
             grbTripulantes.Enabled = ovni.Situacao;
 
+            if (ovni.PlanetaAtual == "Terra")
+            {
+                pbTerra.Visible = true;
+            }
+            else
+            {
+                pbTerra.Visible = false;    
+            }
+
         }
 
         private void btnLigar_Click(object sender, EventArgs e)
@@ -87,6 +96,87 @@ namespace GerenciadorDeOVNI
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            AtualizarInformacoes();
+        }
+
+        private void btnRemoverTrip_Click(object sender, EventArgs e)
+        {
+            if (ovni.RemoverTripulante())
+            {
+                MessageBox.Show("Tripulante removido!", "Sucesso!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Não é possível deixar a nave sem operadores!", "ERRO!!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            AtualizarInformacoes();
+        }
+
+        private void btnAbduzir_Click(object sender, EventArgs e)
+        {
+            if (ovni.Abduzir())
+            {
+                MessageBox.Show("Forma de vida capturada!", "Sucesso!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Não é possível abduzir mais pessoas!", "ERRO!!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            AtualizarInformacoes();
+        }
+
+        private void btnDesabduzir_Click(object sender, EventArgs e)
+        {
+            if (ovni.Desabduzir())
+            {
+                MessageBox.Show("Forma de vida devolvida ao planeta natal!", "Sucesso!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Não há mais formas de vida a bordo!", "ERRO!!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            AtualizarInformacoes();
+        }
+
+        private void btnMudarPlaneta_Click(object sender, EventArgs e)
+        {
+            if (ovni.MudarPlaneta(cmbPlanetas.Text))
+            {
+                MessageBox.Show("Salto realizado, pouso completo!", "Sucesso!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Não é possível saltar, selecione um planeta válido!", "ERRO!!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            AtualizarInformacoes();
+
+        }
+
+        private void btnRetornar_Click(object sender, EventArgs e)
+        {
+            if (ovni.RetornarAoPlanetaDeOrigem())
+            {
+                MessageBox.Show("Salto realizado, retorno realizado com sucesso!", "Sucesso!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Não é possível saltar, verifique as condições atual de retorno!", "ERRO!!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
             AtualizarInformacoes();
         }
     }

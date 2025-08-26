@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace GerenciadorDeOVNI
 {
@@ -52,6 +53,22 @@ namespace GerenciadorDeOVNI
                 gerenciador.ShowDialog(); // Abrir a janela do gerenciador
 
                 Show(); // Mostrar novamente a tela atual
+            }
+        }
+
+        private void txbTrip_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txbAbd.Focus();
+            }
+        }
+
+        private void txbAbd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmbPlanetas.Focus();
             }
         }
     }

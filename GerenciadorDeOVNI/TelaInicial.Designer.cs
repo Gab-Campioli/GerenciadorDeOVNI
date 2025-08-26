@@ -37,8 +37,8 @@
             this.cmbPlanetas = new System.Windows.Forms.ComboBox();
             this.btnInicio = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbAlienInicial = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAlienInicial)).BeginInit();
             this.SuspendLayout();
             // 
             // lbltTrip
@@ -59,6 +59,7 @@
             this.txbTrip.Name = "txbTrip";
             this.txbTrip.Size = new System.Drawing.Size(141, 29);
             this.txbTrip.TabIndex = 1;
+            this.txbTrip.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbTrip_KeyDown);
             // 
             // txbAbd
             // 
@@ -67,6 +68,7 @@
             this.txbAbd.Name = "txbAbd";
             this.txbAbd.Size = new System.Drawing.Size(141, 29);
             this.txbAbd.TabIndex = 3;
+            this.txbAbd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbAbd_KeyDown);
             // 
             // lblAbd
             // 
@@ -122,15 +124,15 @@
             this.lblTitulo.TabIndex = 7;
             this.lblTitulo.Text = "Onde iremos abduzir hoje?";
             // 
-            // pictureBox1
+            // pbAlienInicial
             // 
-            this.pictureBox1.Image = global::GerenciadorDeOVNI.Properties.Resources.alien;
-            this.pictureBox1.Location = new System.Drawing.Point(80, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(297, 171);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.pbAlienInicial.Image = global::GerenciadorDeOVNI.Properties.Resources.alien;
+            this.pbAlienInicial.Location = new System.Drawing.Point(80, 23);
+            this.pbAlienInicial.Name = "pbAlienInicial";
+            this.pbAlienInicial.Size = new System.Drawing.Size(297, 171);
+            this.pbAlienInicial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAlienInicial.TabIndex = 8;
+            this.pbAlienInicial.TabStop = false;
             // 
             // TelaInicial
             // 
@@ -138,7 +140,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(439, 508);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbAlienInicial);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnInicio);
             this.Controls.Add(this.cmbPlanetas);
@@ -154,7 +156,7 @@
             this.Name = "TelaInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicializador";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAlienInicial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,7 +171,7 @@
         private System.Windows.Forms.Label lblOrigem;
         private System.Windows.Forms.ComboBox cmbPlanetas;
         private System.Windows.Forms.Button btnInicio;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbAlienInicial;
         public System.Windows.Forms.Label lblTitulo;
     }
 }
